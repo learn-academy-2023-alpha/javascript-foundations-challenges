@@ -58,3 +58,44 @@ const noBs = (array) =>  {
     return array.filter(Boolean)
 } 
 console.log(noBs(filterArrayValues))
+
+// Create a function that takes in a string and returns a new string with all the vowels removed.
+const str = "javascript is awesome"
+// output: "jvscrpt s wsm"
+// pseudocode: 
+    // input - "string"
+    // output - new string with no vowels
+    //create a function named noVowels
+    // declared the vowels
+    // then used .split to turned the string into an array
+    // used .filter to remove vowels
+    // then used .join to bring the array together into a string
+
+    const noVowels = () => {
+        let vowels = ['a', 'e', 'i', 'o', 'u']
+        return str
+        .split("")
+        .filter(string => !vowels.includes(string))
+        .join('')
+    }
+
+    console.log(noVowels(str))
+    // --> "jvscrpt s wsm"
+
+
+// Create a function that takes in two arrays as arguments returns one array with no duplicate values.
+const arr1 = [3, 7, 10, 5, 4, 3]
+const arr2 = [7, 8, 2, 1, 5, 4]
+// output: [3, 7, 10, 5, 4, 8, 2, 1]
+
+//pseudocode:
+// input 2 arrays
+// output 1 array with no duplicate values
+// create a function to make our code efficient and dynamic
+// filter out if items show up more than once 
+
+const newArray = (array) => {
+    return array.filter()
+}
+
+console.log(newArray)
