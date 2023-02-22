@@ -58,18 +58,26 @@ const noVowels = (string) => {
 //log function and pass in test string 
 console.log(noVowels(str))
 
-
 // Create a function that takes in two arrays as arguments returns one array with no duplicate values.
 const arr3 = [3, 7, 10, 5, 4, 3]
 const arr4 = [7, 8, 2, 1, 5, 4]
 // output: [3, 7, 10, 5, 4, 8, 2, 1]
 
-//create function that takes in two arrays
-const onlyUniques = (array1, array2) => {
-    //create a new array that concats the input arrays
-    let newArr = array1.concat(array2)
-    //filter the new array to return values only in their first occurrence 
-    return newArr.filter((value, index) => newArr.indexOf(value) === index)
+// //create function that takes in two arrays
+// const onlyUniques = (array1, array2) => {
+//     //create a new array that concats the input arrays
+//     let newArr = array1.concat(array2)
+//     //filter the new array to return values only in their first occurrence 
+//     return newArr.filter((value, index) => newArr.indexOf(value) === index)
+// }
+// //log the function passing in both test arrays
+// console.log(onlyUniques(arr3, arr4))
+
+//creat a function that takes in two arrays
+const easyUniques = (array1, array2) => {
+    //concats two arrays, transforms them into a set(by definition: a collection of unique values that removes all duplicates)
+    //returns the set transformed back into an array
+    return [...new Set(array1.concat(array2))]
 }
-//log the function passing in both test arrays
-console.log(onlyUniques(arr3, arr4))
+//log function and pass in two test arrays
+console.log(easyUniques(arr3, arr4))
