@@ -64,12 +64,38 @@ const str = "javascript is awesome"
 // Create a function that takes in two arrays as arguments returns one array with no duplicate values.
 const arr1 = [3, 7, 10, 5, 4, 3]
 const arr2 = [7, 8, 2, 1, 5, 4]
-//pseudo code: create function noDupe that takes in two arrays as arguments. Concat the two arrays into a new array called arrCombined. Push each element of the arrCombined array into a new array arrNoDupe using the conditional to determine if the number is already present in the array.
+//pseudo code: create function noDupe that takes in two arrays as arguments. 
+//Concat the two arrays into a new array called arrCombined. 
+//Push each element of the arrCombined array into a new array arrNoDupe using the conditional to determine if the number is already present in the array.
 
-const noDupe = (arr1, arr2) => {
-    let arrCombined = [arr1.concat(arr2)]
-    let arrNoDupe = []
-    return arrCombined
-}
-
+// const noDupe = (arr1, arr2) => {
+//     let arrCombined = [arr1.concat(arr2)]
+//     let arrNoDupe = []
+//     arrCombined.map((value) => {
+//         if(arrNoDupe.includes(value) == false){  
+//             arrNoDupe.push(value)
+//             console.log(arrNoDupe)
+//         } else if(arrNoDupe.includes(value) == true){
+//             // console.log(arrNoDupe)
+//         }
+//     })
+//     return arrNoDupe
+// }
+let combArray = arr1.concat(arr2)
+console.log(combArray)
+// A Set is a collection of unique values, it will implicitly remove duplicate values
+// concat arr2 onto arr1 
+// create a new set with the combined array
+// let noDupe = [...new Set(combArray)]
+// console.log(noDupe)
 // output: [3, 7, 10, 5, 4, 8, 2, 1]
+
+// We were trying to use the map function combined with a conditional, when we could have just used the forEach with a conditional to push the values into a new array
+let noDupe = []
+combArray.forEach((parameter) =>{
+    if(!noDupe.includes(parameter)){
+        noDupe.push(parameter)
+    }
+})
+console.log(noDupe)
+
