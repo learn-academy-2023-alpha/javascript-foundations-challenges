@@ -91,6 +91,7 @@ console.log(onlyLetters(comboArr).join(""))
 
 
 // Create a function that takes in an array of numbers and returns the sum.
+
 const addThese1 = [1, 2, 3, 4]
 // output: 10
 
@@ -125,4 +126,15 @@ console.log(addTogether(addThese2).reduce((partialSum, a) => partialSum + a, 0))
 
 const indexHighestNumber = [1, 4, 2, 3]
 // // output: 1
+
+=======
+// const addThese1 = [1, 2, 3, 4]
+// // output: 10
+
+// const addThese2 = []
+// // output: 0
+// Create a function that takes in an array of numbers and returns the index of the largest number.
+// const indexHighestNumber = [1, 4, 2, 3]
+// // output: 1
+
 
