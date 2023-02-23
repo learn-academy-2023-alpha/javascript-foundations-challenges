@@ -91,6 +91,43 @@ console.log(onlyLetters(comboArr).join(""))
 
 
 // Create a function that takes in an array of numbers and returns the sum.
+
+const addThese1 = [1, 2, 3, 4]
+// output: 10
+
+// Pseudo code:
+// input: array of numbers
+// output: return sum of numbers in array
+// create a function addTogether 
+// declare new variable sum
+// iterate through array (for loop)
+// return the sum 10
+const addThese2 = [] // // output: 0
+const addTogether = (array) => {
+    let sum = []
+    for (let i=0; i<array.length; i++) {
+        sum.push(array[i])
+    }
+    return sum
+}
+
+console.log(addTogether(addThese1).reduce((partialSum, a) => partialSum + a, 0))
+
+console.log(addTogether(addThese2).reduce((partialSum, a) => partialSum + a, 0))
+
+
+// Create a function that takes in an array of numbers and returns the index of the largest number.
+
+// pseudo code:
+// create a function largestNum 
+// declare new variable 
+// iterate through array
+// return index of largest number
+
+const indexHighestNumber = [1, 4, 2, 3]
+// // output: 1
+
+=======
 // const addThese1 = [1, 2, 3, 4]
 // // output: 10
 
@@ -99,3 +136,5 @@ console.log(onlyLetters(comboArr).join(""))
 // Create a function that takes in an array of numbers and returns the index of the largest number.
 // const indexHighestNumber = [1, 4, 2, 3]
 // // output: 1
+
+
