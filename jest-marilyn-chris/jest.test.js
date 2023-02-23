@@ -74,14 +74,37 @@ const budgetTest = (price) => {
 
 // Write the test for a function that takes in two numbers and returns the smaller number.
 // Pseudo: create function named numTest, takes in two numbers and evaluates which number is smaller
-// input: two numbers
+// input: two numbers 
 // output: smallest number
 
-
+describe("numTest", () =>{
+    it("evaluates which number is smaller", () => {
+        expect(numTest(50, 75)).toEqual(50)
+        expect(numTest(100, 75)).toEqual(75)
+        expect(numTest(10, 10)).toEqual(10)
+    })
+})
 
 // Create the function that will make the test pass.
+// Pseudo:
+// create function named NumTest
+// take in two numbers
+// use built in method Math.min to return the smaller number
 
+const numTest = (num1, num2) => {return Math.min(num1,num2)}
 
+// this works too with our testing
+// const numTest = (num1, num2) => {
+//  if(num1 > num2){
+//         return num2
+//     } else if(num1 < num2){
+//         return num1
+//     } else if(num1 === num2){
+//         return "these numbers are the same"
+//     } else{
+//         return "error"
+//     }
+// }
 
 
 // Write the test for a function that takes in one numbers and returns whether the number is odd.
