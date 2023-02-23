@@ -211,12 +211,62 @@ const greetTest = (name) => {
 
 }
 
-
-
 // Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
+// Pseudo: create function named oddTestEven that takes in a number and returns whether the number is odd or even
+// Input: a number (number)
+// Output: whether the number is odd or even "string"
+
+describe("oddTestEven", () =>{
+    it("returns whether the number is odd or even", () => {
+        expect(oddTestEven(4)).toEqual("even")
+        expect(oddTestEven(111)).toEqual("odd")
+        expect(oddTestEven(3.14)).toEqual("not an integer")
+        expect(oddTestEven("banana")).toEqual("not a number")
+    })
+})
+
 // Create the function that will make the test pass.
+// Create a function oddTestEven that receives an integer for an input. Uses an if/else loop to check conditions and return the appropriate response as a string
+// Checks if the input is a number; returns "not a number" if it is not
+// Checks if the number is an integer; returns "not an integer" if it is not
+
+const oddTestEven = (number) => {
+    if (typeof number != "number"){
+        return "not a number"
+    } else if(number % 1 > 0){
+        return "not an integer"
+    } else if(number % 2 === 0){
+        return "even"
+    } else if(number % 2 === 1){
+        return "odd"
+    } else {
+        return "error"
+    }
+}
+
 // Write the test for a function called doubler that takes a number and returns the result of the number multiplied by 2.
+// Pseudo: create function named doublerTest that takes in a number and returns the value multiplied by 2
+// Input: a number (number)
+// Output: a number (number)
+
+describe("doublerTest", () =>{
+    it("returns the value multiplied by 2", () => {
+        expect(doublerTest(4)).toEqual(8)
+        expect(doublerTest(111)).toEqual(222)
+        expect(doublerTest(3.14)).toEqual(6.28)
+        expect(doublerTest("banana")).toEqual("not a number")
+    })
+})
+
 // Create the function that will make the test pass.
+const doublerTest = (number) => {
+    if (typeof number != "number"){
+        return "not a number"
+    } else {
+        return number * 2
+    }
+}
+
 // Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
 // Create the function that will make the test pass.
 // Write the test for a function called divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
