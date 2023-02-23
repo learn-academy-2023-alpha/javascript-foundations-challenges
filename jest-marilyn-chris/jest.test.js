@@ -328,4 +328,56 @@ const divisibleByTest = (num1, num2) => {
 }
 
 // Write the test for a function called fizzbuzz. If a number is a multiple of 3, replace it with the word "fizz". If a number is a multiple of five, replace it with the word "buzz". If a number is a multiple of both 3 and 5, replace it with "fizzbuzz".
+// Pseudo: create a function fizzTestBuzz that takes a number or array as an input
+// If the input values are divisible by both 3 and 5, replace that value with "fizzbuzz"
+// If the input values are divisible by 5, replace the value with "buzz"
+// If the input values are divisible by 3, replace the value with "fizz"
+// Otherwise, return the value unchanged
+
+describe("fizzTestBuzz", () =>{
+    it("returns whether the first number is evenly divisible by the second", () => {
+        expect(fizzTestBuzz(5)).toEqual("buzz")
+        expect(fizzTestBuzz(50)).toEqual("buzz")
+        expect(fizzTestBuzz(27)).toEqual("fizz")
+        expect(fizzTestBuzz(28)).toEqual(28)
+        expect(fizzTestBuzz(30)).toEqual("fizzbuzz")
+        // expect(fizzTestBuzz([30, 4, 20, 60])).toEqual(["fizzbuzz",4,"buzz","fizzbuzz"]) // array version did not work
+    })
+})
+
 // Create the function that will make the test pass.
+// Version 1, implements if/else statements and % to determine whether the value is divisible by 15, 5, or 3.
+// Returns "fizzbuzz" for numbers divisible by 15, "buzz" for numbers divisible by 5, "fizz" for numbers divisible by 3, and the unchanged value otherwise
+const fizzTestBuzz = (value) => {
+    if (value % 15 == 0){
+        return "fizzbuzz"
+    } else if (value % 5 == 0){
+        return "buzz"
+    } else if (value % 3 == 0){
+        return "fizz"
+    } else return value
+}
+
+
+// Attempted higher-order function. Didn't work. Received array.map is not a function. Tried using if statement to only run HOF on arrays; received same error.
+// const fizzTestBuzz = (input) => {
+//     if(typeof input == "array"){
+//         return input.map(value => {
+//             if (value % 15 == 0){
+//                 return "fizzbuzz"
+//             } else if (value % 5 == 0){
+//                 return "buzz"
+//             } else if (value % 3 == 0){
+//                 return "fizz"
+//             } else return value
+//         })
+//     }else{
+//         if (input % 15 == 0){
+//             return "fizzbuzz"
+//         } else if (input % 5 == 0){
+//             return "buzz"
+//         } else if (input % 3 == 0){
+//             return "fizz"
+//         } else return input
+//     }
+// }
