@@ -39,10 +39,52 @@
 
 // Write the test for a function that returns "in budget" if a price is lower than $300.
 // Create the function that will make the test pass.
+// Pseudo Code: Create a function called inBudget that takes in a price (a number). Using a conditional statement, if the price is lower than 300, returns 'in budget' (string) if greater than or equal to 300, return 'not in budget'
+
+// describe("inBudget", () => {
+//     it("Describes whether a price is within the budget of $300", () =>{
+//         expect(inBudget(100)).toEqual("in budget")
+//         expect(inBudget(301)).toEqual("not in budget")
+//     })
+    
+// })
+
+// const inBudget = (price) => {
+//     return price < 300 ? "in budget" : "not in budget"
+// }
+
 
 // Write the test for a function that takes in two numbers and returns the smaller number.
+//PseudoCode: Create a function called smallerNum that takes in two numbers as arguments and uses a conditional to return the lower number
+
+// describe("smallerNum", () =>{
+//     it("Returns the smaller of two numbers", () => {
+//         expect(smallerNum (5, 0)).toEqual(0)
+//         expect(smallerNum (390923049203598, 2342394)).toEqual(2342394)
+//         expect(smallerNum (3, 3)).toEqual("the numbers are equal")
+//     })
+// })
+
 // Create the function that will make the test pass.
+
+// const smallerNum = (num1, num2) => {
+//     if (num1 === num2){
+//         return "the numbers are equal"
+//     } else return num1 < num2 ? num1 : num2
+// }
+
+
+
 // Write the test for a function that takes in one numbers and returns whether the number is odd.
+//Pseudocode: create a function called isItOdd that takes in a number and uses a conditional to determine if the number is odd and returns a string of "the number is odd" of odd, "the number is even" if even, and returns "the number is zero" if zero
+
+describe("isItOdd", () => {
+    it("Describes whether an inputted number is odd", () => {
+
+    })
+})
+
+
 // Create the function that will make the test pass.
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
 // Create the function that will make the test pass.
