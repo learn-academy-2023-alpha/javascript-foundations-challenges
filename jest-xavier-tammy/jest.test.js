@@ -206,10 +206,81 @@ if(number1 % 2 === 0){
 
 
 // Write the test for a function called doubler that takes a number and returns the result of the number multiplied by 2.
+// psuedocode: create a function called doubler 
+// input will take in a number
+// expected output will be the result of the number multiplied by 2
+
+
+
+describe("doubler", () => {
+    it("returns a number multiplied by 2", () => {
+      expect(doubler(8)).toEqual(16)
+    })
+  })
+  const doubler= (num) =>{
+    return num *2 
+  }
 // Create the function that will make the test pass.
-// Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
+// Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other
+// psuedocode : create a function called multiply .
+// input: will be two numbers 
+// output : will be one of the numbers multiplied by the other 
+//  we will create a function that will make the test pass.
+
+describe ("multiply", () => {
+    it ( "returns one number multiplied by the other", () =>{
+        expect (multiply(2,9)).toEqual(18)
+    }
+    )
+})
+
+const multiply= (num1,num2) => {
+    return (num1 * num2)
+}
 // Create the function that will make the test pass.
 // Write the test for a function called divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
+// psuedocode: create a function called divisibleBy 
+// input : will take two numbers as an arugment
+// output : will return a statment on wheter the first number is evenly divisible by the second.  Variables for function will be (10,5), output should log "10 is evenly divisible by 5"
+
+describe ("divisibleBy", ()=>{
+    it ( "returns a statement, 10 is evenly divisible by 5 ", () =>{
+        expect (divisibleBy(10,5)).toEqual("10 is evenly divisible by 5")
+    }
+    )
+} )
+const divisibleBy =(num3,num4) => {
+if ( num3 % num4 ===0) {
+    return (`${num3} is evenly divisible by ${num4}`)
+} else if ( num3 % num4 !==0 ) {
+    return (`${num3} is not evenly divisible by ${num4}`)
+} else {
+    return "please input numerical values "
+}
+}
 // Create the function that will make the test pass.
 // Write the test for a function called fizzbuzz. If a number is a multiple of 3, replace it with the word "fizz". If a number is a multiple of five, replace it with the word "buzz". If a number is a multiple of both 3 and 5, replace it with "fizzbuzz".
 // Create the function that will make the test pass.
+
+// psuedocode : we will create a function named fizzbuzz.
+// input : will be  a number 
+// output : if a number entered as argument is a multiple of 5, replace it with the word "buzz". If a number is entered as a multiple of 3, replace with the word "fizz" If a number entered is a multiple of both 3 and 5, replace it with "fizzbuzz".
+
+
+describe ("fizzbuzz",() => {
+ it( " returns correlated statement if number is multiple of 3,5, or both", ()=>{
+    expect(fizzbuzz(10)).toEqual("buzz")
+ })
+}) 
+
+const fizzbuzz = (num) => {
+    if (num % 3 === 0 ){
+        return( "fizz")
+    } else if (num % 5 ===0 ){
+        return ("buzz")
+    } else if ( num % 15 ===0) {
+        return ("fizzbuzz")
+    } else 
+ {return "number is not divisible by 3 or 5"
+}
+} 
