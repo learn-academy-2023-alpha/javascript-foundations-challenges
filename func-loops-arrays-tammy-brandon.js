@@ -59,14 +59,37 @@ console.log(letters(comboArr))
 // --> nicework
 
 // Create a function that takes in an array of numbers and returns the sum.
-// const addThese1 = [1, 2, 3, 4]
+const addThese1 = [1, 2, 3, 4]
 // // output: 10
 
-// const addThese2 = []
+const addThese2 = []
 // // output: 0
+
+const sumOfNumbers = (array) => {
+    let newArray = []
+    for (let i=0; i < array.length; i++){
+        newArray.push(array[i])
+    }
+    return newArray.reduce((a, b) => a + b, 0)
+}
+console.log(sumOfNumbers(addThese2))
+
 // Create a function that takes in an array of numbers and returns the index of the largest number.
-// const indexHighestNumber = [1, 4, 2, 3]
+const indexHighestNumber = [1, 4, 2, 3]
 // // output: 1
+
+const largestNumber = (array) => {
+    let largest = 0
+    let newArray = []
+    for (let i=0; i < array.length; i++){
+        if (array[i] > largest){
+            largest = array [i]
+        }
+    }
+    return largest
+}
+console.log(largestNumber(indexHighestNumber))
+
 // 🏔 Stretch Goals
 // Create a function that takes in two arrays and returns one array with no duplicate values.
 // const arr1 = [3, 7, 10, 5, 4, 3, 3]
