@@ -77,19 +77,58 @@
 
 // Write the test for a function that takes in one numbers and returns whether the number is odd.
 //Pseudocode: create a function called isItOdd that takes in a number and uses a conditional to determine if the number is odd and returns a string of "the number is odd" of odd, "the number is even" if even, and returns "the number is zero" if zero
-
-describe("isItOdd", () => {
-    it("Describes whether an inputted number is odd", () => {
-
-    })
-})
+// const isItOdd = (num) => {
+//     if (num === 0) {
+//         return "The number is 0"
+//     }
+//     else return num % 2 !== 0 ? "The number is odd" : "The number is not odd"
+// }
+// describe("isItOdd", () => {
+//     it("Describes whether an inputted number is odd", () => {
+//         expect(isItOdd(1)).toEqual("The number is odd")
+//         expect(isItOdd(2)).toEqual("The number is not odd")
+//         expect(isItOdd(0)).toEqual("The number is 0")
+//     })
+// })
 
 
 // Create the function that will make the test pass.
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
 // Create the function that will make the test pass.
+// Pseudo: create a function called fruitColorChecker that takes in a a fruit (string) and using a conditional returns the color of that fruit.
+// const fruitColorChecker = (fruit) => {
+//     if (fruit === "banana"){
+//         return "yellow"
+//     }
+//     else if (fruit ==="apple"){
+//         return "red"
+//     }
+//     else if (fruit === "grape"){
+//         return "purple"
+//     }
+//     else return "Thats not fruit"
+// }
+
+// describe("fruitColorChecker", () => {
+//     it("Returns the correct color of fruit", () => {
+//         expect(fruitColorChecker("banana")).toEqual("yellow")
+//         expect(fruitColorChecker("apple")).toEqual("red")
+//         expect(fruitColorChecker("grape")).toEqual("purple")
+//     })
+// })
+
 // Write the test for a function called rick that returns "Morty".
 // Create the function that will make the test pass.
+// Pseudo: create a function called rick that return morty
+const rick = () => {
+    return "Morty"
+}
+
+describe("rick", () => {
+    it("Returns the Morty", () => {
+        expect(rick()).toEqual("Morty")
+    })
+})
 // Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
 // Create the function that will make the test pass.
 // Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
