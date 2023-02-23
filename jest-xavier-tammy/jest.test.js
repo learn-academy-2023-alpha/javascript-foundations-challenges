@@ -1,4 +1,5 @@
 // Write the test for a function that returns "drink coffee" if you are tired and "keep working" if you are not tired.
+// Create the function that will make the test pass.
 //psuedocode: create a function called workHarder that takes in a single parameter and returns a string. Input will be either (string) tired or(string) super tired. output should be either "drink coffee"(string) or "keep working"(string)
 
 describe( "workHarder",() => {
@@ -22,9 +23,29 @@ const workHarder = (tiredOrnot) => {
 
 
 
-// Create the function that will make the test pass.
+
 // Write the test for a function that returns "relax" if you are stressed and "keep going" if you are not stressed.
 // Create the function that will make the test pass.
+// Pseudocode:
+// Create a function called stressLevels
+// input a string of either stressed or not stressed
+// output a string of either relax or keep going
+// Create a function that will make the test pass
+
+describe("stressLevels", () => {
+    it("returns a statement of relax or keep going", () => {
+        expect(stressLevels("stressed")).toEqual("relax")
+    })
+})
+
+const stressLevels = (stressedOrBlessed) => {
+let chillPill = "stressed"
+    return "relax"
+}
+
+
+
+
 // Write the test for a function that returns "in budget" if a price is lower than $300.
 // Create the function that will make the test pass.
 // Write the test for a function that takes in two numbers and returns the smaller number.
