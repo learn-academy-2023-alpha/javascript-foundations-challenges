@@ -217,64 +217,93 @@ const oddOrEven = (number) => {
 // Write the test for a function called doubler that takes a number and returns the result of the number multiplied by 2.
 // Create the function that will make the test pass.
 
-//create function doubler
-//input: 
-//ouput: returns 
+//create function called doubler
+//input: a number 
+//ouput: returns the input number multiplied by 2
 
-describe("oddOrEven", () => {
-    it("returns a string whether the number is odd or even", () => {
-      expect(oddOrEven(17)).toEqual("Odd")
-      expect(oddOrEven(14)).toEqual("Even")
+describe("doubler", () => {
+    it("returns the input number multiplied by 2", () => {
+      expect(doubler(17)).toEqual(34)
+      expect(doubler(14)).toEqual(28)
    
     })
 })
 
+const doubler = (number) => {
+    return number * 2
+}
 
 
-// Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers 
-// multiplied by the other.
+// Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
 // Create the function that will make the test pass.
 
 //create function multiply
-//input:
-//ouput: returns 
+//input: 2 numbers
+//ouput: returns both numbers multiplied together
 
-describe("oddOrEven", () => {
-    it("returns a string whether the number is odd or even", () => {
-      expect(oddOrEven(17)).toEqual("Odd")
-      expect(oddOrEven(14)).toEqual("Even")
+describe("multiply", () => {
+    it("returns both numbers multiplied together", () => {
+      expect(multiply(3, 5)).toEqual(15)
+      expect(multiply(7, 2)).toEqual(14)
    
     })
 })
 
-// Write the test for a function called divisibleBy that takes two numbers as arguments and returns whether the first number is 
-// evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
+const multiply = (num1, num2) => {
+    return num1 * num2 
+}
+
+// Write the test for a function called divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
 // Create the function that will make the test pass.
 
 //create function divisibleBy
-//input: 
-//ouput: returns 
+//input: takes 2 numbers
+//ouput: returns whether the first number is evenly divisble by the second
 
-describe("oddOrEven", () => {
-    it("returns a string whether the number is odd or even", () => {
-      expect(oddOrEven(17)).toEqual("Odd")
-      expect(oddOrEven(14)).toEqual("Even")
+describe("divisibleBy", () => {
+    it("returns a string whether the first number is evenly divisble by the second", () => {
+      expect(divisibleBy(6, 3)).toEqual("6 is divisible by 3")
+      expect(divisibleBy(4, 3)).toEqual("4 is not divisible by 3")
    
     })
 })
 
-// Write the test for a function called fizzbuzz. If a number is a multiple of 3, replace it with the word "fizz". If a number is 
-// a multiple of five, replace it with the word "buzz". If a number is a multiple of both 3 and 5, replace it with "fizzbuzz".
+const divisibleBy = (num1, num2) => {
+    if(num1 % num2 === 0){
+        return `${num1} is divisible by ${num2}`
+    } else if(num2 % num1 != 0){
+        return `${num1} is not divisible by ${num2}`
+    } else {
+        return "Not a number"
+    }
+}
+
+// Write the test for a function called fizzbuzz. If a number is a multiple of 3, replace it with the word "fizz". If a number is a multiple of five, replace it with the word "buzz". If a number is a multiple of both 3 and 5, replace it with "fizzbuzz".
 // Create the function that will make the test pass.
 
 //create function fizzbuzz
-//input: 
-//ouput: 
+//input: array of numbers
+//using .map to iterate through the array 
+//ouput: returns an array of mixed data of numbers or strings
 
-describe("oddOrEven", () => {
-    it("returns a string whether the number is odd or even", () => {
-      expect(oddOrEven(17)).toEqual("Odd")
-      expect(oddOrEven(14)).toEqual("Even")
-   
+describe("fizzBuzz", () => {
+    it("returns an array of mixed data of numbers or strings", () => {
+      expect(fizzBuzz([3, 5, 9, 15, 25, 37])).toEqual(["fizz", "buzz", "fizz", "fizzbuzz", "buzz", "this number is not divisible by 3, 5, or both"])
     })
 })
+
+let numArray = [3, 5, 9, 15, 25, 37]
+
+const fizzBuzz = (array) => {
+    return array.map((value, index) => {
+        if (value % 3 === 0 && value % 5 === 0) {
+            return index = "fizzbuzz" 
+     } else if (value % 5 === 0) {
+            return index = "buzz" 
+     } else if (value % 3 === 0){
+            return index = "fizz"
+     } else {
+        return "this number is not divisible by 3, 5, or both"
+     }
+    })
+}
