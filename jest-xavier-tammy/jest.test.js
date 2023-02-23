@@ -48,9 +48,72 @@ let chillPill = "stressed"
 
 // Write the test for a function that returns "in budget" if a price is lower than $300.
 // Create the function that will make the test pass.
+// psuedocode: create a function with an input of a number and returns a string.
+// output a string that reads "in budget"
+// input a number 
+//  function name will be stayBroke
+describe("stayBroke", ()=>{
+    it (" returns a string of in budget", ()=>{
+        expect(stayBroke(10)).toEqual("in budget")
+    } )
+})
+let heGotMoney = 10
+const stayBroke = (num) => {
+    if (num < 300)
+    return "in budget"
+}
+
 // Write the test for a function that takes in two numbers and returns the smaller number.
+// psuedocode: create a function named smallNum that takes in two numbers and returns the smaller number
+// output will be a smaller number from arguments
+// inputs will be two numbers
+// create a function that will make the test pass.
+
+describe ("smallNum",()=> {
+    it (" returns a smaller number", ()=> {
+        expect(smallNum(0,2)).toEqual (0) 
+    })
+})
+let mediumNum = 0
+let largerNum = 2
+const smallNum =(num1,num2)=> {
+    if (num1>num2) 
+   {
+
+    return num2 }
+ else if(num1<num2)
+{return num1 }
+else {
+    return "please enter numerical value"
+} }
+
+
+
 // Create the function that will make the test pass.
 // Write the test for a function that takes in one numbers and returns whether the number is odd.
+// psuedocode : create a funtion that takes in one number and returns whether the number is odd or even.
+// output : a statement whether a number is odd or even
+// input: a singular number 
+// create a function named oddOreven
+describe("oddOreven", () => {
+    it("returns a statement whether number is odd or even ", () => {
+      expect(oddOreven(9)).toEqual(" this is odd")
+    })
+  })
+  let newNum = 4
+  const oddOreven = (num) => {
+    if(num % 2 !== 0)
+    {return " this is odd"
+  } else if (num % 2 ===0)
+  {return "this is even"
+}
+else {
+    return "please enter numerical value"
+}
+ } 
+
+
+
 // Create the function that will make the test pass.
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
 // Create the function that will make the test pass.
