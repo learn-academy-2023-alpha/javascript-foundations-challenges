@@ -120,21 +120,62 @@
 // Write the test for a function called rick that returns "Morty".
 // Create the function that will make the test pass.
 // Pseudo: create a function called rick that return morty
-const rick = () => {
-    return "Morty"
-}
+// const rick = () => {
+//     return "Morty"
+// }
 
-describe("rick", () => {
-    it("Returns the Morty", () => {
-        expect(rick()).toEqual("Morty")
-    })
-})
+// describe("rick", () => {
+//     it("Returns the Morty", () => {
+//         expect(rick()).toEqual("Morty")
+//     })
+// })
 // Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
 // Create the function that will make the test pass.
+//Pseduocode: Create a function that will take a name (string) as an argument and perform string interpolation to return a greeting with that name.
+
+// describe("greeter", () => {
+//     it("Returns a greeting with the name that was input", () => {
+//         expect(greeter("Aaron")).toEqual("Hello Aaron, you sure are good at coding")
+//     })
+// })
+
+// const greeter = (name) => {
+//     return `Hello ${name}, you sure are good at coding`
+// }
+
 // Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
 // Create the function that will make the test pass.
+//Pseudo Code: Create a function called oddOrEven that takes a number as an input and uses a conditional to  returns whether or not the number is odd or even. If the number is zero, return 'the number is 0'
+
+// describe("oddOrEven", () => {
+//     it("Returns a statement that defines the input as odd, even, or zero", () =>{
+//         expect(oddOrEven(0)).toEqual("The number is 0")
+//         expect(oddOrEven(1)).toEqual("The number is odd")
+//         expect(oddOrEven(2)).toEqual("The number is even")
+//     })
+// })
+
+// const oddOrEven = (number) =>{
+//     if(number === 0){
+//         return "The number is 0"
+//     } else return (number % 2 === 0) ? "The number is even" : "The number is odd"
+// }
+
 // Write the test for a function called doubler that takes a number and returns the result of the number multiplied by 2.
 // Create the function that will make the test pass.
+// Pseudo Code: Create a function called doubler that takes a number as an input. Multiplies the input by two and returns the result
+
+describe("doubler", () =>{
+    it("Returns the input multiplied by 2", () =>{
+        expect(doubler(3)).toEqual(6)
+        expect(doubler(0)).toEqual(0)
+        expect(doubler(-5)).toEqual(-10)
+    })
+})
+
+const doubler = (num) =>{
+    return num * 2
+}
 // Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
 // Create the function that will make the test pass.
 // Write the test for a function called divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
