@@ -108,9 +108,57 @@ const numTest = (num1, num2) => {return Math.min(num1,num2)}
 
 
 // Write the test for a function that takes in one numbers and returns whether the number is odd.
+// Pseudo: create function named oddTest, takes in one number and returns whether the number is odd
+// input: one number
+// output: Boolean response
+
+describe("oddTest", () =>{
+    it("returns whether the number is odd", () => {
+        expect(oddTest(15)).toEqual(true)
+        expect(oddTest(70)).toEqual(false)
+        expect(oddTest(0)).toEqual(false)
+        expect(oddTest("string")).toEqual(false)
+    })
+})
+
 // Create the function that will make the test pass.
+// Create function oddTest
+// Use % 2 to determine whether the input is odd
+const oddTest = (num) => {
+    if(num % 2 === 1){return true}
+    else {return false}
+}
+
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
+// Pseudo: create function named fruitTest, takes in a fruit and returns a color
+// input: fruit name (string)
+// output: color (string)
+
+describe("fruitTest", () =>{
+    it("takes in a fruit and returns a color", () => {
+        expect(fruitTest("banana")).toEqual("yellow")
+        expect(fruitTest("apple")).toEqual("red")
+        expect(fruitTest("grape")).toEqual("purple")
+    })
+})
+
 // Create the function that will make the test pass.
+// Create a function fruitTest that takes in a string representing a fruit and returns a string representing the color
+// Implements a switch/case logic thread to provide the appropriate response
+const fruitTest = (fruit) => {
+    switch(fruit){
+        case "banana":
+            return "yellow";
+            break;
+        case "apple":
+            return "red";
+            break;
+        case "grape":
+            return "purple";
+            break;
+    }
+}
+
 // Write the test for a function called rick that returns "Morty".
 // Create the function that will make the test pass.
 // Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
