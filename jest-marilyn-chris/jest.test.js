@@ -159,10 +159,60 @@ const fruitTest = (fruit) => {
     }
 }
 
-// Write the test for a function called rick that returns "Morty".
+// Write the test for a function called rickTest that returns "Morty".
+
+// Pseudo: create function named rickTest that doesn't take in anything and returns a string 
+
+describe("rickTest", () =>{
+    it("returns 'Morty'", () => {
+        expect(rickTest("banana")).toEqual("Morty")
+        expect(rickTest("apple")).toEqual("Morty")
+        expect(rickTest("grape")).toEqual("Morty")
+        expect(rickTest("roll")).toEqual("Never gonna give you up")
+    })
+})
+
 // Create the function that will make the test pass.
+// Pseudo: function rickTest returns "Morty" no matter what (maybe)
+
+const rickTest = (egg) => {
+    if(egg === "roll"){
+        return "Never gonna give you up"
+    } else{
+        return "Morty"
+    }
+}
+
+
+
 // Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
+// Pseudo: create function named greetTest that takes in a name (string) and returns a personal greeting including the name given (string)
+
+describe("greetTest", () =>{
+    it("returns a greeting with that name to the screen", () => {
+        expect(greetTest("Banana")).toEqual("Salutations Banana!")
+        expect(greetTest("Rick")).toEqual("Salutations Rick!")
+        expect(greetTest("Morty")).toEqual("Salutations Morty!")
+        expect(greetTest("")).toEqual("cricket .. cricket..")
+    })
+})
+
 // Create the function that will make the test pass.
+//Pseudo: create function named greetTest that takes in a name (string) 
+// if/else statement to evaluate if string has a name or is empty
+// use string interpolation to take the given name and return a personal greeting
+
+const greetTest = (name) => {
+    if(name === ""){
+        return "cricket .. cricket.."
+    } else { return `Salutations ${name}!`
+
+    }
+
+}
+
+
+
 // Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
 // Create the function that will make the test pass.
 // Write the test for a function called doubler that takes a number and returns the result of the number multiplied by 2.
