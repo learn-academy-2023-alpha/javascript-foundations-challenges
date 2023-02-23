@@ -41,9 +41,49 @@ const testStressed = (stress) => {
 }
 
 // Write the test for a function that returns "in budget" if a price is lower than $300.
+// Pseudo: 
+// Create a function budgetTest that evaluates whether a price is in budget
+// Input - "price" (number)
+// Output - "in budget" if price <300 (string)
+
+describe("budgetTest", () => {
+    it("evaluates whether a price is in budget", () => {
+        expect(budgetTest("299")).toEqual("in budget")
+        expect(budgetTest(299)).toEqual("in budget")
+        expect(budgetTest("$299")).toEqual("in budget") // failed initial test because it's not a number, passes final test
+        expect(budgetTest(500)).toEqual("over budget")
+    })
+})
+
 // Create the function that will make the test pass.
+// Pseudo: Create function budgetTest takes a parameter price, formatted as a number, then uses a series of if/else logic to provide the appropriate response
+
+const budgetTest = (price) => {
+    let budget = 300 // create variable for budget 
+    if(typeof price === "string"){  // check if user inputs a number or a string with "$" before the price
+        price = price.replace("$", "")   // takes the string and removes the $ 
+    }
+    if(price < budget){
+        return "in budget"
+    } else if(price > budget){
+        return "over budget"
+    } else{
+        return "error: enter price"
+    }
+}
+
 // Write the test for a function that takes in two numbers and returns the smaller number.
+// Pseudo: create function named numTest, takes in two numbers and evaluates which number is smaller
+// input: two numbers
+// output: smallest number
+
+
+
 // Create the function that will make the test pass.
+
+
+
+
 // Write the test for a function that takes in one numbers and returns whether the number is odd.
 // Create the function that will make the test pass.
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
