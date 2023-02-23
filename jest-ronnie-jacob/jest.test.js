@@ -77,34 +77,83 @@ describe("theSmaller", () => {
     })
 })
 
-
-
+// Create the function that will make the test pass.
 const theSmaller = (num1,num2) =>{
-    if (num1 < num2){
-        return "is the smaller number"
-    }else{(num1 > num2)
-        return "is the larger"
-    }
-        
+  if (num1 < num2){
+      return "is the smaller number"
+  }else{(num1 > num2)
+      return "is the larger"
+  }
+      
 }
 
-
-
-
-
-
-
-// Create the function that will make the test pass.
 // Write the test for a function that takes in one numbers and returns whether the number is odd.
+describe("odds", () => {
+  it("return wether the number is odd.", () => {
+    expect(odds(5)).toEqual("odd")
+  })
+})
 // Create the function that will make the test pass.
+const odds = (num) =>{
+  if(num % 2 !== 0){
+ return "odd" }
+ else return "not a number"
+} 
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
+describe("fruit", () => {
+  it("color of fruit", () => {
+    expect(fruit("banana")).toEqual("yellow")
+      expect(fruit("apple")).toEqual("red")
+      expect(fruit("grape")).toEqual("purple")
+  })
+})
+
 // Create the function that will make the test pass.
+const fruit = (fruit) => {
+  if (fruit === "banana"){
+    return "yellow"
+  } else if (fruit === "apple"){
+    return "red"
+  } else if (fruit === "grape") {
+  return "purple" }
+  else return "this is not a fruit"
+}
 // Write the test for a function called rick that returns "Morty".
+describe("name", () => {
+  it("Morty", () => {
+    expect(name()).toEqual("Morty")
+  })
+})
 // Create the function that will make the test pass.
-// Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
+const name = () => {
+  return "Morty"
+}
+// Write the test for a function called greeter that takes a name as
+//an argument and returns a greeting with that name to the screen.
+describe("greeter", () => {
+  it("hey carlos", () => {
+    expect(nameTwo("carlos")).toEqual("hey carlos")
+  })
+})
 // Create the function that will make the test pass.
+const nameTwo = (name) => {
+  return `hey ${name}`
+}
 // Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
+describe("oddOrEven", () => {
+  it("it returns an even or odd number", () => {
+    expect((oddOrEven(3))).toEqual("odd")
+    expect((oddOrEven(2))).toEqual("even")
+  })
+})
 // Create the function that will make the test pass.
+const oddOrEven = (number) => {
+  if (number % 2 !== 0){
+    return "odd"
+  } else if (number % 2 === 0){
+  return "even"
+}
+}
 // Write the test for a function called doubler that takes a number and returns the result of the number multiplied by 2.
 // Create the function that will make the test pass.
 // Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
