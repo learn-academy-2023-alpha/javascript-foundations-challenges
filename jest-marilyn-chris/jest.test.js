@@ -267,9 +267,65 @@ const doublerTest = (number) => {
     }
 }
 
-// Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
+// Write the test for a function called multiplyTest that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
+// Psuedo: create function multiplyTest
+// input: two numbers 
+// output: the result of the numbers multiplied by each other
+
+describe("multiplyTest", () =>{
+    it("logs the result of one of the numbers multiplied by the other", () => {
+        expect(multiplyTest(50, 75)).toEqual(3750)
+        expect(multiplyTest(100, 75)).toEqual(7500)
+        expect(multiplyTest(10, 10)).toEqual(100)
+        expect(multiplyTest("banana")).toEqual("not a number")
+    })
+})
+
+
 // Create the function that will make the test pass.
-// Write the test for a function called divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
+// pseudo: create function multiplyTest
+// if/else to determine if given data types are numbers (typeof) and if they are, multiply them together
+
+const multiplyTest = (num1, num2) => {
+    if (typeof num1 != "number" || typeof num2 != "number"){
+        return "not a number"
+    } else {
+        return num1 * num2
+    }
+}
+
+
+// Write the test for a function called divisibleByTest that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
+//Pseudo: create function divisibleByTest
+// input: takes in 2 numbers
+// if/else statement to divide the first num by second num and see if there is a remainder or not
+// output: string that logs if the first number is evenly divisible by the second
+
+describe("divisibleByTest", () =>{
+    it("returns whether the first number is evenly divisible by the second", () => {
+        expect(divisibleByTest(50, 75)).toEqual("50 is not evenly divisible by 75")
+        expect(divisibleByTest(50, 6)).toEqual("50 is not evenly divisible by 6")
+        expect(divisibleByTest(10, 5)).toEqual("10 is evenly divisible by 5")
+        expect(divisibleByTest("banana")).toEqual("not a number")
+    })
+})
+
 // Create the function that will make the test pass.
+// pseudo: create function divisibleByTest that takes in 2 numbers 
+// use num1 % num2 to determine if the remainder == 0 or not 
+// if/else statements to log if num1 is evenly div by num 2 or the opposite
+
+const divisibleByTest = (num1, num2) => {
+    if (typeof num1 != "number" || typeof num2 != "number"){
+        return "not a number"
+    } else if (num1 % num2 == 0) {
+        return `${num1} is evenly divisible by ${num2}`
+    } else if (num1 % num2 !== 0) {
+        return `${num1} is not evenly divisible by ${num2}`
+    } else {
+        return "error"
+    }
+}
+
 // Write the test for a function called fizzbuzz. If a number is a multiple of 3, replace it with the word "fizz". If a number is a multiple of five, replace it with the word "buzz". If a number is a multiple of both 3 and 5, replace it with "fizzbuzz".
 // Create the function that will make the test pass.
