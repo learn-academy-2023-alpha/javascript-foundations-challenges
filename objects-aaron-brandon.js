@@ -10,7 +10,7 @@ const person = {
 }
 // Write the code that accesses the first name of the person object.
 //PC: use the object.key syntax to access the 'firstName' value
-// console.log(person.firstName)
+// console.log(person.firstName
 
 // Write the code that accesses the last name of the person object.
 //PC: use the object.key syntax to access the 'lastName' value
@@ -98,8 +98,34 @@ const animals = [
   { name: "Hank", type: "cat", age: 11 }
 ]
 // Create a function that takes in an array of animal objects and returns a new array with only the objects that are cats.
+
+// PS: make a function named cats that takes in an array and returns only the objects that are cats.
+// input: an array of various objects
+// using .filter, iterate through the array and determine if the object 'animals[index.type] equals cat
+// if so, return that new array.
+
+const catFinder = () => {
+  // let cats = []
+      return animals.filter((object) => object.type === "cat")
+    }
+
+console.log(catFinder(animals));
+
 // Create a function that takes in an array of animal objects and returns a new array with only the names of the animals.
+// PS: create a function called animalNames that takes the input an array of animals and uses the .map function to return a new array that only has the names of the animals.
+
+const animalNames = () => {
+  let names = []
+  animals.forEach((object) => names.push(object.name))
+  return names
+}
+
+console.log(animalNames(animals));
+
 // Create a function that takes in an array of animal objects and returns a new array of the names of the animals that are more than 10 years old.
+
+
+
 // Create a function that takes in an array of animal objects and returns a new array with a sentence about each animal.
 // Consider this variable:
 
