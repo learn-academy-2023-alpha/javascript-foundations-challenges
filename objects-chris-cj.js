@@ -63,9 +63,10 @@ console.log(lunch.ingredients[2]) // banana
 // Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
 const recipe = function(object) {
   // return `The ingredients for a ${object.name} ${object.type} are ${object.ingredients.join(", ")}` : The ingredients for a PB and Banana sandwich are bread, peanut butter, banana
-  return `The ingredients for a ${object.name} ${object.type} are ${object.ingredients[0]}, ${object.ingredients[1]}, and ${object.ingredients[2]}.` // The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana.
-  // let {ingredients[0, 1, 2]} = object.ingredients
-  // return `The ingredients for a ${object.name} ${object.type} are ${ingredients[0]}, ${ingredients[1]}, and ${ingredients[2]}.`
+//   return `The ingredients for a ${object.name} ${object.type} are ${object.ingredients[0]}, ${object.ingredients[1]}, and ${object.ingredients[2]}.` // The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana.
+  let {ingredients} = object
+  return `The ingredients for a ${object.name} ${object.type} are ${ingredients[0]}, ${ingredients[1]}, and ${ingredients[2]}.`
+//   The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana.
 }
 console.log(recipe(lunch))
 
@@ -130,30 +131,37 @@ console.log(onlyAnimals(animals))
 
 // Consider this variable:
 
-// const author = {
-//   name: "H. G. Wells",
-//   genre: "science fiction"
-// }
+const author = {
+  name: "H. G. Wells",
+  genre: "science fiction"
+}
+
 // Write the code that destructures the author object so that the following code snippet will run successfully:
 // console.log(`${name} is a ${genre} author`)
+
+let {name, genre} = author
+// let {genre} = author
+
+console.log(`${name} is a ${genre} author`);
 // // output: "H. G. Wells is a science fiction author"
-
-
 
 // Consider this variable:
 
-// const pokeOne = {
-//   species: "Charmandar",
-//   pokemon_type: "Fire"
-// }
+const pokeOne = {
+  species: "Charmandar",
+  pokemon_type: "Fire"
+}
 
-// const pokeTwo = {
-//   species: "Magikarp",
-//   pokemon_type: "Water"
-// }
+const pokeTwo = {
+  species: "Magikarp",
+  pokemon_type: "Water"
+}
+
 // Create a function called describePokemon that take an object like the ones above and uses destructuring to return a description of the Pokemon so that the following code snippet will run successfully:
+
 // console.log(describePokemon(pokeOne))
 // // output: "Charmandar is a Fire pokemon"
+
 // console.log(describePokemon(pokeTwo))
 // // output: "Magikarp is a Water pokemon"
 
