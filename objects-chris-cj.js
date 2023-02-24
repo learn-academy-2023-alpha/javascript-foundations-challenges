@@ -48,27 +48,86 @@ console.log(totalWithTax(product)); // 26.74
 
 // Consider this variable:
 
-// const lunch = {
-//   name: "PB and Banana",
-//   type: "sandwich",
-//   ingredients: ["bread", "peanut butter", "banana"]
-// }
+const lunch = {
+  name: "PB and Banana",
+  type: "sandwich",
+  ingredients: ["bread", "peanut butter", "banana"]
+}
+
 // Write the code that accesses the ingredients property.
+console.log(lunch.ingredients) // [ 'bread', 'peanut butter', 'banana' ]
+
 // Write the code that access the third ingredient of the lunch object.
+console.log(lunch.ingredients[2]) // banana
+
 // Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+const recipe = function(object) {
+  // return `The ingredients for a ${object.name} ${object.type} are ${object.ingredients.join(", ")}` : The ingredients for a PB and Banana sandwich are bread, peanut butter, banana
+  return `The ingredients for a ${object.name} ${object.type} are ${object.ingredients[0]}, ${object.ingredients[1]}, and ${object.ingredients[2]}.` // The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana.
+  // let {ingredients[0, 1, 2]} = object.ingredients
+  // return `The ingredients for a ${object.name} ${object.type} are ${ingredients[0]}, ${ingredients[1]}, and ${ingredients[2]}.`
+}
+console.log(recipe(lunch))
+
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+lunch.recipe = function() {
+  return `The ingredients for a ${this.name} ${this.type} are ${this.ingredients[0]}, ${this.ingredients[1]}, and ${this.ingredients[2]}.` // The ingredients for a PB and 
+}
+console.log(lunch.recipe())
+
 // Consider this variable:
 
-// const animals = [
-//   { name: "Waffles", type: "dog", age: 7 },
-//   { name: "Fluffy", type: "cat", age: 14 },
-//   { name: "Spelunky", type: "dog", age: 4 },
-//   { name: "Hank", type: "cat", age: 11 }
-// ]
+const animals = [
+  { name: "Waffles", type: "dog", age: 7 },
+  { name: "Fluffy", type: "cat", age: 14 },
+  { name: "Spelunky", type: "dog", age: 4 },
+  { name: "Hank", type: "cat", age: 11 }
+]
 // Create a function that takes in an array of animal objects and returns a new array with only the objects that are cats.
+const onlyCats = function(array) {
+  return array.filter(value => {
+    return value.type === "cat"
+  })
+}
+
+console.log(onlyCats(animals))
+// [
+//   { name: 'Fluffy', type: 'cat', age: 14 },
+//   { name: 'Hank', type: 'cat', age: 11 }
+// ]
+
 // Create a function that takes in an array of animal objects and returns a new array with only the names of the animals.
+const onlyNames = function(array) {
+  return array.map(value => value.name)
+}
+console.log(onlyNames(animals)) // [ 'Waffles', 'Fluffy', 'Spelunky', 'Hank' ]
+
 // Create a function that takes in an array of animal objects and returns a new array of the names of the animals that are more than 10 years old.
+const onlyOld = function(array) {
+  // Create a HOF to filter the animal objects within the array
+  return array.filter(value => {
+    // Return animal objects with .age > 10
+    if (value.age > 10) {return value}
+  // Create a HOF to map the .name of each animal to a new array
+  }).map(value => value.name)
+}
+console.log(onlyOld(animals)) // [ 'Fluffy', 'Hank' ]
+
+
 // Create a function that takes in an array of animal objects and returns a new array with a sentence about each animal.
+const onlyAnimals = function(array) {
+  return array.map(value => {
+    return `${value.name} is a wonderful ${value.type}! They are ${value.age} years old, and excited to meet you!`
+  })
+}
+console.log(onlyAnimals(animals))
+// [
+//   'Waffles is a wonderful dog! They are 7 years old, and excited to meet you!',
+//   'Fluffy is a wonderful cat! They are 14 years old, and excited to meet you!',
+//   'Spelunky is a wonderful dog! They are 4 years old, and excited to meet you!',
+//   'Hank is a wonderful cat! They are 11 years old, and excited to meet you!'
+// ]
+
 // Consider this variable:
 
 // const author = {
@@ -78,6 +137,9 @@ console.log(totalWithTax(product)); // 26.74
 // Write the code that destructures the author object so that the following code snippet will run successfully:
 // console.log(`${name} is a ${genre} author`)
 // // output: "H. G. Wells is a science fiction author"
+
+
+
 // Consider this variable:
 
 // const pokeOne = {
@@ -94,6 +156,9 @@ console.log(totalWithTax(product)); // 26.74
 // // output: "Charmandar is a Fire pokemon"
 // console.log(describePokemon(pokeTwo))
 // // output: "Magikarp is a Water pokemon"
+
+
+
 // Consider this variable:
 
 // const triangleDimensions = {
@@ -102,6 +167,9 @@ console.log(totalWithTax(product)); // 26.74
 // }
 // Modify the triangleDimensions object to have a method that returns the area of the triangle.
 // Write the code that will update the base to be the value of 6.
+
+
+
 // 🏔 Stretch Goals
 // Consider this variable:
 
