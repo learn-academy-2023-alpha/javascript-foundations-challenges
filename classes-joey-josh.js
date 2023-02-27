@@ -6,7 +6,7 @@
 
 class Coffee {
   constructor(type, cream, sugar) {
-    this.type = type
+    this.type = type.toLowerCase()
     this.cream = cream
     this.sugar = sugar
   }
