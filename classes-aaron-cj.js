@@ -52,7 +52,9 @@ class Latte {
     this.shot = shot;
   }
   latteProfile() {
-    return `A ${this.flavor} latte with ${this.milkType} milk, and ${this.shots()}`;
+    return `A ${this.flavor} latte with ${
+      this.milkType
+    } milk, and ${this.shots()}`;
   }
   shots() {
     if (this.shot > 1 || this.shot === 0) {
@@ -74,7 +76,7 @@ console.log(newLatte.latteProfile());
 
 // Write the code that makes a double shot, hazelnut latte with almond milk.
 
-const nottaLatte = new Latte("hazelnut", "almond", 2)
+const nottaLatte = new Latte("hazelnut", "almond", 2);
 
 // Log the double shot, hazelnut latte with almond milk's profile.
 
@@ -82,5 +84,37 @@ console.log(nottaLatte.latteProfile());
 
 // Volume of a Cylinder: create a class for Cylinder
 // Write a class that calculates the volume of a Cylinder: v = πr2h (r is the radius and h is the height of the cylinder)
-// Write the code that rounds the volume of the cylinder to four decimal places
+class Cylinder {
+  constructor(radius, height) {
+    this.radius = radius;
+    this.height = height;
+    this.volume = Math.PI * this.radius ** 2 * this.height;
+  }
+  // Write the code that rounds the volume of the cylinder to four decimal places
+  volumeRounder() {
+    // return Math.round(this.volume * 10000) / 10000; // returns a number
+
+    return Number(this.volume.toFixed(4));
+  }
+}
+
 // Write the code that creates three unique cylinder objects
+const cylinder1 = new Cylinder(2, 2);
+// console.log(cylinder1);
+// console.log(cylinder1.volumeRounder());
+
+// Pseudo Code:
+// create a function that takes height and radius as an argument to create a cylinder
+// height and radius come from two seperate arrays
+// creating an object requires new object(argument1, argument2)
+//
+
+let cylinderHeight = [2, 3, 5];
+let cylinderRadius = [5, 2, 8];
+
+const cylinderMaker = (height, radius) => {
+  for (let i = 0; i < height.length; i++);
+  return new Cylinder(height, radius);
+};
+
+console.log(cylinderMaker(cylinderHeight, cylinderRadius));
