@@ -82,3 +82,26 @@ console.log(testLatte.latteProfile())
 // Write a class that calculates the volume of a Cylinder: v = πr2h (r is the radius and h is the height of the cylinder)
 // Write the code that rounds the volume of the cylinder to four decimal places
 // Write the code that creates three unique cylinder objects
+
+
+// pseudocode : define a new class Cylinder
+// each Cylinder is defined by its radius and height
+// the cylinder objects have a method to return the volume of the cylinder
+class Cylinder {
+  constructor(radius, height) {
+    this.radius = radius
+    this.height = height
+  }
+  volume(digits = 0) { //round method rounds to a number of digits defaulted to 0, 
+    // formula for the volume of a cylinder is πr**2h 
+    return Math.round((Math.PI * this.height * this.radius**2) * 10** digits)/ 10** digits
+  }
+}
+let newCylinder = new Cylinder(3, 7)
+console.log(newCylinder.volume(4));
+
+let cylinderArray = [] 
+for(let i = 1; i < 4; i++) { // pushes new cylinder objects to a new array using the index of the for loop to define radius and height
+  cylinderArray.push(new Cylinder(i, i * 2))
+}
+console.log(cylinderArray);
