@@ -76,7 +76,15 @@ this.height = height
         let volume = Math.PI * (this.radius * this.radius) * this.height
     return volume.toFixed(4)
 } 
+surfaceArea() {
+    let area = 2 * Math.PI * this.radius * this.height + 2 * Math.PI * (this.radius * this.radius)
+    return area.toFixed(4)
+}
+areaProfile(){
+    return `The area of the cylinder is ${this.surfaceArea()}`
+}
 } 
+
 // Write the code that rounds the volume of the cylinder to four decimal places
 // Write the code that creates three unique cylinder objects
 const cylinder1 = new Cylinder(3, 6)
@@ -84,4 +92,11 @@ console.log(cylinder1.volumeProfile());
 const cylinder2 = new Cylinder(2, 5)
 console.log(cylinder2.volumeProfile());
 const cylinder3 = new Cylinder(4, 7)
-console.log(cylinder3.volumeProfile());
+console.log(cylinder3.volumeProfile())
+console.log(cylinder1.areaProfile());
+
+
+
+// surface area of a cylinder
+
+
